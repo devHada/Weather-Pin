@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div class="dashboard_screen">
+      <div class="title">
+        <h1>WeatherPin</h1>
+        <p>Get accurate weather instantly</p>
+      </div>
+      <div class="input_text">
+        <input type="text" placeholder="Type Your City...." id="input" />
+        <button id="search">
+          Get Weather <i class="bi bi-arrow-right-circle-fill"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="loading_screen" style="display: none">
+      <div id="snow"></div>
+      <p class="glow-text">Fetching Weather…</p>
+    </div>
+
+    <div class="result_screen" style="display: none">
+      <div class="main_container">
+        <div class="image_background">
+          <div class="info_top">
+            <h3 id="day">Tuesday</h3>
+            <p id="date">20 Jun 2022</p>
+            <p id="location"><i class="bi bi-geo-alt"></i>Banglore</p>
+          </div>
+
+          <div class="info_center">
+            <img id="logo" src="#" alt="#" />
+          </div>
+
+          <div class="info_bottom">
+            <h2 id="temp">29°C</h2>
+            <h3 id="tempName">Sunny</h3>
+          </div>
+        </div>
+        <div class="info_other">
+          <div class="info_percentage">
+            <h3>PRECIPITATION<span id="precipitation">0%</span></h3>
+            <h3>HUMIDITY<span id="humidity">0%</span></h3>
+            <h3>WIND SPEED<span id="wind">0km/h</span></h3>
+          </div>
+          <div class="forcast_container">
+            <div class="forcast_weather">
+              <img id="day_today" src="#" />
+              <p id="forcast_day_today">Tue</p>
+              <p id="forcast_temp_today">30°C</p>
+            </div>
+            <div class="forcast_weather">
+              <img id="day_tomorrow" src="#" />
+              <p id="forcast_day_tomorrow">Wed</p>
+              <p id="forcast_temp_tomorrow">22°C</p>
+            </div>
+            <div class="forcast_weather">
+              <img id="day_after_tomorrow" src="#" />
+              <p id="forcast_day_after_tomorrow">Thu</p>
+              <p id="forcast_temp_after_tomorrow">24°C</p>
+            </div>
+          </div>
+
+          <div class="change_location">
+            <button id="change_location">
+              <i class="bi bi-geo-alt"></i>Change Location
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
